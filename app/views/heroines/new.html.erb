@@ -1,0 +1,21 @@
+<form method = "POST" action = "/heroines">
+<div>
+<label > New HEROINE NAME</label>
+<input type = "text" name = "name" >
+</div>
+<div>
+<label >SUPER NAME</label>
+<input type = "text" name = "super_name" >
+</div>
+<div>
+<label >Power ID</label>
+<select name = "power_id" disabled>
+<% @powers.each do |power| %>
+<option value = " <%= power.id %>"> <%= power.name %> 
+</option>
+<%end%>
+</select>
+</div>
+
+<input type = "submit">
+</form>
