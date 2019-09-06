@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <form action="/heroines" method="POST">
+        <h1>Create Your Heroine Today!</h1>
+        <fieldset>
+            <h3><legend>Heroine's Secret Identity</legend></h3>
+             <input type="text" name="name">
+        </fieldset><br>
+        <fieldset>
+            <h3><legend>Heroine's Public Persona</legend></h3>
+            <input type="text" name="super_name">
+        </fieldset><br>
+        <fieldset>
+            <h3><legend>Choose Her Power!</legend></h3>
+            <select name="power_id">
+                <% @powers.each do |power| %>
+                    <option value="<%= power.id %>"><%= power.name %></option>
+                <% end %>
+            </select>
+        </fieldset><br><br>
+        <input type="submit" value="Create Your Heroine!">
+    </form>
+    <a href="/heroines">Heroines</a>
+    <a href="/powers">Powers</a>
+</body>
+</html>
