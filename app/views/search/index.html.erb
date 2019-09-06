@@ -1,0 +1,10 @@
+<h2>Filtered Heroines</h2>
+<%= puts @heroines %>
+<ul>
+  <% @heroines.each do |heroine| %>
+    <li>
+      <%= link_to("#{heroine.super_name}", heroine) %>
+    </li>
+    <br>
+  <% end %>
+</ul>

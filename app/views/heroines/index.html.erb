@@ -1,5 +1,9 @@
 <h2>All Heroines</h2>
 
+<h4>Search By Superpower</h4>
+  <form method="get" action="/search">
+    <input type="text" name="super_name"><input type="submit" name="submit">
+  </form>
 <ul>
   <% @heroines.each do |heroine| %>
     <li>

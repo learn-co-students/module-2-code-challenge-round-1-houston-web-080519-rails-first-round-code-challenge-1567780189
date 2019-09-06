@@ -13,7 +13,6 @@ class HeroinesController < ApplicationController
   end
 
   def create
-    
     @newHeroine = Heroine.create({
       name: params[:name],
       super_name: params[:super_name],

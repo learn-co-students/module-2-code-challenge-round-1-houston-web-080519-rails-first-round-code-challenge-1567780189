@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :powers, :heroines
+  resources :powers, :heroines, :search
+
+
 
   # get('/powers', to: 'powers#index')
 
