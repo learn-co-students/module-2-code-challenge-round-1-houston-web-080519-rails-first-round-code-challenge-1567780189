@@ -4,4 +4,10 @@ Rails.application.routes.draw do
 
   get('/heroines', to: 'heroines#index')
 
+  get('/heroines/new', to: 'heroines#new')
+
+  post('/heroines', to: 'heroines#index')
+
+ 
+
 end
