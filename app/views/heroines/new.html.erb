@@ -1,0 +1,16 @@
+<form action = "/heroines/new" method = POST>
+<label for = "name">Name</label>
+<input id = "name" type = "text" name = "name" required = "required"/></br>
+<label for = "super_name">Super_name</label>
+<input id = "super_name" type = "text" name = "super_name" required = "required"/></br>
+<label for = "superpower">Choose a superpower</label>
+<select name="superpower"><br>
+<% @powers.each do |power|%>
+    <option value="<%power.id%>"><%=power.name%></option>
+<% end %></br>
+<select>
+
+</br>
+<input type = "submit" value = "Create Your Superhero"/>
+
+
