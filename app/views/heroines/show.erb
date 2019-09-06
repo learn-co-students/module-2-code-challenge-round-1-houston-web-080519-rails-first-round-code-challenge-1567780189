@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title><%= @heroine.name %></title>
+        </head>
+
+        <body>
+            <h1><%= @heroine.name %></h1>
+            <h3>AKA: <%= @heroine.super_name %></h3>
+            <h3>Power: <%= link_to("#{@power.name}", @power) %>
+        </body>

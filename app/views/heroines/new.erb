@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Create a new Heroine!</title>
+        </head>
+
+        <body>
+            <h1>Create a new Heroine!</h1>
+                <form method="post" action="/heroines">
+                    <label>Name: </label>
+                        <input type="text" name="name"><br />
+                    <label>Super Name: </label>
+                        <input type="text" name="super_name"><br />
+                    <label>Power: </label>
+                        <select name="power_id">
+                            <% @powers.each do |power| %>
+                                <option value="<%= power.id %>" name="power_id"><%= power.name %></option>
+                            <% end %>
+                        </select>
+                        <br />
+                    <input type="submit">
+                </form>
+        </body>
+    </html>
