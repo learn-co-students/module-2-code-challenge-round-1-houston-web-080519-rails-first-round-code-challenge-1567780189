@@ -1,0 +1,51 @@
+<head>
+    <title><%=@heroine.name%></title>
+    <style>
+        body {
+            background: #eee;
+        }
+        a {
+            text-decoration: none;
+        }
+        .big{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .title{
+            grid-column: 2;
+            grid-row: 1;
+            text-align: center;
+            color: blue;
+        }
+        .each{
+            grid-column: 2;
+            grid-row: 2;
+            border: 1px solid black;
+            text-align: center;
+            background: white;
+        }
+        .one{
+            grid-row: 2;
+            padding: 1em;
+        }
+        .two {
+            grid-row: 3;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+<div class = "big">
+    <h1 class = "title"><%=@heroine.name%></h1>
+    <div class = "each one">
+        <h2><%=@heroine.super_name%></h2>
+    </div>
+    <div class = "each two">
+        <h2><a class = "button" href = "/powers/<%=@heroine.power_id%>"><%=@power%></a></h2>
+    </div>
+</div>
+</body>
+
+
+
+
